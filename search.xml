@@ -1,19 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
-  <entry>
-    <title></title>
-    <url>%2F2019%2F07%2F22%2F%E9%9A%8F%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[title: 七月二十二日晚上九点记]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[位运算]]></title>
-    <url>%2F2019%2F07%2F13%2F%E4%BD%8D%E8%BF%90%E7%AE%97%2F</url>
-    <content type="text"><![CDATA[位运算相关概念bit是度量信息的单位，包括0和1两种状态。计算机的各种运算最后无不归结为一个个bit的变化。熟练掌握并利用位运算，能够帮助我们理解程序运行中的种种表现，提高程序运行的时空效益，降低编程复杂度。 运算符 与 或 非 异或 and or not xor &amp; &#124; ~ ^ 按位与 &amp; 语法: 将参与运算的两数的相应的的各位进行与运算，当两位都是1的情况则结果位为1，其他情况结果位为0. 栗子： 9&amp;5 1001 (9的补码) 0101 (5的补码) 0001 结果对应数值为1 1234567#include&lt;iostream&gt;using namespace std;int main()&#123; int a=9,b=5; cout&lt;&lt;(a&amp;b)&lt;&lt;endl; return 0; &#125; 注意：因为&lt;&lt;的优先级高于&amp;、|、~、^，因此需要打括号不然会报错亲身体会 按位或 | 语法:将参与运算的两数的相应的的各位进行或运算，当两位其中至少有一个是1的情况则结果位为1，其他情况结果位为0. 栗子： 9|5 1001 (9的补码) 0101 (5的补码) 1101 结果对应数值为13 1234567#include&lt;iostream&gt;using namespace std;int main()&#123;int a=9,b=5;cout&lt;&lt;(a|b)&lt;&lt;endl;return 0;&#125; 按位非 语法: 将参与运算的数的各位进行非运算，当位是1的情况则结果位为0，位是0的情况则结果位为1，即对各位进行取反. 栗子： ~9 0000 1001 (9的补码) 1111 0110 结果对应数值为-10 #include&lt;iostream&gt; using namespace std; int main(){ int a=9; cout&lt;&lt;(~a)&lt;&lt;endl; return 0; }注意：计算的结果1111 0110为结果的补码，要计算其值应先求出它的原码。先减一在把除符号位以外的位取反得到其原码为10001010=-10 为完待续]]></content>
-      <categories>
-        <category>算法竞赛入门指南</category>
-      </categories>
-      <tags>
-        <tag>位运算</tag>
-      </tags>
-  </entry>
 </search>
