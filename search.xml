@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo]]></title>
-    <url>%2F2020%2F02%2F08%2Fhexo%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[日记]]></title>
+    <url>%2F2020%2F02%2F08%2Fdiary1%2F</url>
+    <content type="text"><![CDATA[折腾hexo的一天今天并没有什么特殊事情发生，和往常一样划水过日子，今天也很快过去了，比较有意思的是折腾这个hexo，虽然只是使用一个工具而已，但是也废了挺大功夫的。简单说下假期，比之前有不少进步，但是还是有点力不从心。发挥人的主观能动性也要结合客观规律啊。好好学习天天向上，就是最好的方式了。有些事情我要自己去体会，自己去做，有些问题我要自己去寻找答案。]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
   </entry>
 </search>
