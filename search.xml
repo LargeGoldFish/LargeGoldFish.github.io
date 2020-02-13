@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[日记]]></title>
-    <url>%2F2020%2F02%2F08%2Fdiary1%2F</url>
-    <content type="text"><![CDATA[折腾hexo的一天今天并没有什么特殊事情发生，和往常一样划水过日子，今天也很快过去了，比较有意思的是折腾这个hexo，虽然只是使用一个工具而已，但是也废了挺大功夫的。简单说下假期，比之前有不少进步，但是还是有点力不从心。发挥人的主观能动性也要结合客观规律啊。好好学习天天向上，就是最好的方式了。有些事情我要自己去体会，自己去做，有些问题我要自己去寻找答案。]]></content>
+    <title><![CDATA[Saruman's Army]]></title>
+    <url>%2F2020%2F02%2F13%2FSarumansArmy%2F</url>
+    <content type="text"><![CDATA[&ensp;一道挺基础的贪心算法题，但是我还是水了半天才写出来，我做题像是用猜的，感觉的，这样可不行啊，要锻炼分析，思考的能力。 123456789101112131415161718192021222324252627282930313233343536#include&lt;iostream&gt;#include&lt;algorithm&gt;using namespace std;int r,n;int l[1010];int mark(int);int point(int);int main()&#123; cin&gt;&gt;r&gt;&gt;n; int x,begin=1010; for(int i=1;i&lt;=n;i++)&#123; cin&gt;&gt;x; l[x]=1; begin=min(begin,x); &#125;// int ans=0; while(1)&#123; int marknum=mark(begin); ans++; begin=point(marknum); if(!begin) break;&#125; cout&lt;&lt;ans;return 0;&#125; int mark(int pointnum)&#123; for(int i=pointnum+r;i&gt;=pointnum;i--) if(l[i]) return i; return pointnum; &#125; int point(int marknum)&#123; for(int i=marknum+r+1;i&lt;=1000;i++) if(l[i]) return i; return 0; &#125; 错误的认为端点的覆盖范围之外的第一个点便是作为下一个端点，这就是我直观感觉犯的错误，应该认真理解和分析，对代码的理解和编写能力还算比以前有进步，但之前学习犯的错误，现在才认识算晚了]]></content>
       <categories>
-        <category>diary</category>
+        <category>解题记录</category>
+        <category>贪心</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Maxnum Profit]]></title>
+    <url>%2F2020%2F02%2F13%2FMaxnum-Profit%2F</url>
+    <content type="text"><![CDATA[有意思的一道题，要细品(其实就是这样的题我也想想了一会，我是废物)，就感觉非常interesting、P28 code： 12345678910111213#include&lt;iostream&gt;using namespace std;int main()&#123;int n,s[200100],ans=-1000000000,i,j; cin&gt;&gt;n; for(int z=1;z&lt;=n;z++) cin&gt;&gt;s[z]; for(i=1,j=2;i&lt;n&amp;&amp;j&lt;=n;j++)&#123; if(s[j]-s[i]&gt;ans) ans=s[j]-s[i]; if(s[j]&lt;s[i]) i=j; &#125; cout&lt;&lt;ans;return 0;&#125; &ensp;注意及时最大利益为负值，也要输出，所以ans要初始化一个比可能的最小值还小的数值，更新最值还可以使用min，max函数，这样比较简洁，记得加库函数名。]]></content>
+      <categories>
+        <category>《挑战程序竞赛第一版》</category>
+        <category>基础题</category>
+      </categories>
+      <tags>
+        <tag>你细品</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[InsertionSort]]></title>
+    <url>%2F2020%2F02%2F13%2FinsertionSort%2F</url>
+    <content type="text"><![CDATA[&ensp;基础的算法，注意其中的细节，你细品。 1234567891011121314151617181920212223#include&lt;iostream&gt;using namespace std;int insertionsort(int n,int a[]);int main()&#123; int n,a[101];cin&gt;&gt;n;for(int i=0;i&lt;n;i++) cin&gt;&gt;a[i];insertionsort(n,a);for(int i=0;i&lt;n;i++) cout&lt;&lt;a[i]&lt;&lt;&apos; &apos;;return 0;&#125;int insertionsort(int n,int a[])&#123; for(int i=1;i&lt;n;i++)&#123; int v=a[i]; int j=i-1; while(j&gt;=0&amp;&amp;v&lt;a[j])&#123; a[j+1]=a[j]; j--; &#125; a[j+1]=v; &#125;return 0;&#125;]]></content>
+      <categories>
+        <category>《挑战程序竞赛第一版》</category>
+        <category>排序算法</category>
       </categories>
   </entry>
 </search>
