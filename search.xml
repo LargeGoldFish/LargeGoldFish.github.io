@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[玩具谜题]]></title>
+    <url>%2F2020%2F02%2F14%2F%E7%8E%A9%E5%85%B7%E8%B0%9C%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[&ensp;一道基础的模拟题，模拟题感觉需要对题目描述正确理解，用代码来模拟其中的变化情况，但是题目往往描述的复杂多变，需要理解之后精简才能方面模拟还要注意结合题目实际性质，比如此题中小人的朝向不同和给的数字过大，可以统一处理成顺时针和逆时针后操作，数字过大可以%总人数不影响模拟，不管怎么转小人的编号也不会小于1和大于n，所以模拟的时候要注意题目性质，之后代码实现能力过关就没问题了。 code: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include&lt;iostream&gt;#include&lt;string&gt;using namespace std;const int maxn=100010;struct person&#123; int toward; string position;&#125;p[maxn];struct key&#123; int di; int si;&#125;k[maxn]; int n,m; int solve(int s,int i); int set(int z); int way(int x,int y);int main()&#123; cin&gt;&gt;n&gt;&gt;m; for(int i=1;i&lt;=n;i++)&#123; cin&gt;&gt;p[i].toward&gt;&gt;p[i].position; &#125; for(int i=1;i&lt;=m;i++)&#123; cin&gt;&gt;k[i].di&gt;&gt;k[i].si; &#125; // int ans=solve(1,1); cout&lt;&lt;p[ans].position; return 0;&#125;int solve(int s,int i)&#123; if(i==m+1) return s; if(way(p[s].toward,k[i].di)==1) return solve(set(s+(k[i].si%n)),i+1); else return solve(set(s-(k[i].si%n)),i+1);&#125;int way(int x,int y)&#123; if((x==0&amp;&amp;y==0)||(x==1&amp;&amp;y==1)) return 0; else return 1; &#125;int set(int z)&#123; if(z&gt;n) z=z%n; else if(z&lt;=0) z=z+n;//!! return z;&#125; &ensp; 倒数第三行少了个等于导致wa了一个点 ！mengbier]]></content>
+      <categories>
+        <category>Noip提高组</category>
+        <category>模拟算法</category>
+      </categories>
+      <tags>
+        <tag>细品</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Saruman's Army]]></title>
     <url>%2F2020%2F02%2F13%2FSarumansArmy%2F</url>
     <content type="text"><![CDATA[&ensp;一道挺基础的贪心算法题，但是我还是水了半天才写出来，我做题像是用猜的，感觉的，这样可不行啊，要锻炼分析，思考的能力。 123456789101112131415161718192021222324252627282930313233343536#include&lt;iostream&gt;#include&lt;algorithm&gt;using namespace std;int r,n;int l[1010];int mark(int);int point(int);int main()&#123; cin&gt;&gt;r&gt;&gt;n; int x,begin=1010; for(int i=1;i&lt;=n;i++)&#123; cin&gt;&gt;x; l[x]=1; begin=min(begin,x); &#125;// int ans=0; while(1)&#123; int marknum=mark(begin); ans++; begin=point(marknum); if(!begin) break;&#125; cout&lt;&lt;ans;return 0;&#125; int mark(int pointnum)&#123; for(int i=pointnum+r;i&gt;=pointnum;i--) if(l[i]) return i; return pointnum; &#125; int point(int marknum)&#123; for(int i=marknum+r+1;i&lt;=1000;i++) if(l[i]) return i; return 0; &#125; 错误的认为端点的覆盖范围之外的第一个点便是作为下一个端点，这就是我直观感觉犯的错误，应该认真理解和分析，对代码的理解和编写能力还算比以前有进步，但之前学习犯的错误，现在才认识算晚了]]></content>
